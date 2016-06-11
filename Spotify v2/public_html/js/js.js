@@ -181,12 +181,13 @@ function load_carousel_artist (response,id_carousel){
      
         
     });
+    
     //hover effect
-    $(id_carousel+" ul li").mouseenter(function (){
+    $(id_carousel+" ul li").unbind('mouseenter').mouseenter(function (){
         var id = $(this).attr("id");
        $("#"+id +" .info").slideToggle();
     });
-    $(id_carousel+" ul li").mouseleave(function (){
+    $(id_carousel+" ul li").unbind('mouseleave').mouseleave(function (){
         var id = $(this).attr("id");
         $("#"+id +" .info").slideToggle();
     });
@@ -269,11 +270,11 @@ function load_carousel_albums (response,id_carousel){
 
     });
      //hover effect
-    $(id_carousel+" ul li").mouseenter(function (){
+    $(id_carousel+" ul li").unbind('mouseenter').mouseenter(function (){
         var id = $(this).attr("id");
        $("#"+id +" .info").slideToggle();
     });
-    $(id_carousel+" ul li").mouseleave(function (){
+    $(id_carousel+" ul li").unbind('mouseleave').mouseleave(function (){
         var id = $(this).attr("id");
         $("#"+id +" .info").slideToggle();
     });
@@ -372,11 +373,11 @@ function load_top_artists_track(response, id_carousel){
 
     });
      //hover effect
-    $(id_carousel+" ul li").mouseenter(function (){
+    $(id_carousel+" ul li").unbind('mouseenter').mouseenter(function (){
         var id = $(this).attr("id");
        $("#"+id +" .info").slideToggle();
     });
-    $(id_carousel+" ul li").mouseleave(function (){
+    $(id_carousel+" ul li").unbind('mouseleave').mouseleave(function (){
         var id = $(this).attr("id");
         $("#"+id +" .info").slideToggle();
     });
