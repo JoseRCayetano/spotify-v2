@@ -135,17 +135,17 @@ function load_carousel_artist (response,id_carousel){
                                     '<img src="' + images + '" alt="Chania">'+
                                     '<section class="overlay">'+
                                         '<h4 class="text-center">'+name+'</h4>'+
-                                        '<div class="info">'+
-                                            '<p>'+
-                                                'Followers'+
-                                                '<span class="pull-right">'+followers+'</span>'+
-                                            '</p>'+
-                                            '<p>'+
-                                                'Popularity'+
-                                                '<span class="pull-right">'+popularity+'</span>'+
-                                            '</p>'+
+                                        '<div class="info text-left">'+
+                                            
+                                                '<span>Followers<span class="pull-right">'+followers+'</span></span>'+
+                                                //'<span class="text-right">'+followers+'</span>'+
+                                            
+                                          
+                                                '<span>Popularity <span class="pull-right">'+popularity+'</span></span>'+
+                                                //'<span class="pull-right">'+popularity+'</span>'+
+                                            
                                             '<div class="progress">'+
-                                                '<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="'+popularity+'" aria-valuemin="0" aria-valuemax="100" style="width: '+popularity+'%">'+
+                                                '<div class=" progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="'+popularity+'" aria-valuemin="0" aria-valuemax="100" style="width: '+popularity+'%">'+
                                                     '<span class="sr-only">'+popularity+'% Complete</span>'+
                                                 '</div>'+
                                             '</div>'+
@@ -180,6 +180,15 @@ function load_carousel_artist (response,id_carousel){
         search_top_artist_track(url);
      
         
+    });
+    //hover effect
+    $(id_carousel+" ul li").mouseenter(function (){
+        var id = $(this).attr("id");
+       $("#"+id +" .info").slideToggle();
+    });
+    $(id_carousel+" ul li").mouseleave(function (){
+        var id = $(this).attr("id");
+        $("#"+id +" .info").slideToggle();
     });
     next_artists = response["artists"]["next"]; //Guardo la direccion a la siguiente lista
 }
@@ -229,15 +238,9 @@ function load_carousel_albums (response,id_carousel){
                                     '<img src="' + images + '" alt="Chania">'+
                                     '<section class="overlay">'+
                                         '<h4 class="text-center">'+name+'</h4>'+
-                                        '<div class="info">'+
-                                            '<p>'+
-                                                'Album Type'+
-                                                '<span class="pull-right">'+album_type+'</span>'+
-                                            '</p>'+
-                                            '<p>'+
-                                                
-                                            '</p>'+
-                                            
+                                        '<div class="info text-left">'+
+                                                '<span>Album Type <span class="pull-right">'+album_type+'</span></span>'+
+                                                //'<span class="pull-right">'+album_type+'</span>'+
                                         '</div>'+
                                     '</section>'+
                                 '</div>');
@@ -264,6 +267,15 @@ function load_carousel_albums (response,id_carousel){
         
         e.preventDefault();
 
+    });
+     //hover effect
+    $(id_carousel+" ul li").mouseenter(function (){
+        var id = $(this).attr("id");
+       $("#"+id +" .info").slideToggle();
+    });
+    $(id_carousel+" ul li").mouseleave(function (){
+        var id = $(this).attr("id");
+        $("#"+id +" .info").slideToggle();
     });
     next_albums = response["next"]; //Guardo la direccion a la siguiente lista
 }
@@ -321,14 +333,14 @@ function load_top_artists_track(response, id_carousel){
                                     '<img src="' + images + '" alt="Chania">'+
                                     '<section class="overlay">'+
                                         '<h4 class="text-center">'+name+'</h4>'+
-                                        '<div class="info">'+
-                                            '<p>'+
-                                                'Popularity'+
-                                                '<span class="pull-right">'+popularity+'</span>'+
-                                            '</p>'+
-                                            '<p>'+
+                                        '<div class="info text-left">'+
+                                            
+                                                '<span>Popularity <span class="pull-right">'+popularity+'</span></span>'+
+                                                //'<span class="pull-right">'+popularity+'</span>'+
+                                           
+                                           
                                                 
-                                            '</p>'+
+                                           
                                             
                                         '</div>'+
                                     '</section>'+
@@ -358,6 +370,15 @@ function load_top_artists_track(response, id_carousel){
       var index = tracks.map(function (x){return x.track_id;}).indexOf(id_buscar);
       top_track_moda (tracks[index]);
 
+    });
+     //hover effect
+    $(id_carousel+" ul li").mouseenter(function (){
+        var id = $(this).attr("id");
+       $("#"+id +" .info").slideToggle();
+    });
+    $(id_carousel+" ul li").mouseleave(function (){
+        var id = $(this).attr("id");
+        $("#"+id +" .info").slideToggle();
     });
     
 }

@@ -75,6 +75,7 @@ p {
     background-color:#178d8d;
     top:10%;
     bottom:0;
+    margin-bottom: 10px;
 }
 .progress-bar{
     background-color: #84BD00;  
@@ -110,6 +111,19 @@ https://miketricking.github.io/dist/*/
     left: 0;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    .info {
+        bottom:0;
+        position:absolute;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 5px 10px;
+        color: white;
+        display:none;
+        span {
+            display: block;
+            
+        }
+    }
   }
   &:hover .overlay {
      background-color: rgba(170,170,170,0.4);  
