@@ -1,3 +1,4 @@
+@import 'font-awesome.scss';
 $bg-body: #121314; 
 $bg-carousel: #232329;
 $title-text-color: #686969;
@@ -10,10 +11,12 @@ $icon-width: 32px;
 $carousel-height: 220px;
 $indicator-colorAndBorder: #DFE0E6;
 $spotify-green: #84BD00;
+$font-width: bold;
 
 body {
     background-color: $bg-body;
     color: #686969;
+    color:white;
 }
 img {
     height: $heigth-photo-carousel;
@@ -192,4 +195,17 @@ https://miketricking.github.io/dist/*/
 }
 #albums h2{
     margin-right: 50px;
+}
+.navbar-default {
+    background-color:#24CF5F;
+    border:0px;
+    color: white;
+}
+.navbar-default .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+i{
+    margin-right: 5px;
+    font-size: 21px !Important;
 }
