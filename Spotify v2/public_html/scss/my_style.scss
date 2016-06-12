@@ -16,7 +16,10 @@ $font-width: bold;
 body {
     background-color: $bg-body;
     color: #686969;
-    color:white;
+    color:black;
+}
+h2 {
+    color: white;
 }
 img {
     height: $heigth-photo-carousel;
@@ -204,6 +207,9 @@ https://miketricking.github.io/dist/*/
 .navbar-default .navbar-brand {
     color: white;
     font-weight: bold;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+   color: white; 
 }
 i{
     margin-right: 5px;

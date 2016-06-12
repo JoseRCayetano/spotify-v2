@@ -63,9 +63,7 @@ function create_carousel (lugar,id){
     $(id+' a.left').append('<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span>');
     //Control right
     $(id).append('<a class="right carousel-control" href="'+id+'" role="button" data-slide="next"></a>');
-    $(id+' a.right').append('<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span>');
- 
-    
+    $(id+' a.right').append('<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span>'); 
 }
 function general_config_carousel (id_carousel,whatLoad){
     //FUnction de cargaar mas artistas si los hay dandole a la derecha
@@ -257,12 +255,9 @@ function load_carousel_albums (response,id_carousel){
     //Al pulsar las imagenes
    
     $(id_carousel+" ul li").unbind('click').click(function (e){//Function para cada foto
-        e.preventDefault();
-        
+        e.preventDefault();  
         var id = $(this).attr('id');
-        var album_name = $(this).find("h4").text();
-        
-      
+        var album_name = $(this).find("h4").text(); 
         var url = "https://api.spotify.com/v1/albums/" + id + "/tracks";
         request(url,"load_tracks",album_name);
         
@@ -335,18 +330,11 @@ function load_top_artists_track(response, id_carousel){
                                     '<section class="overlay">'+
                                         '<h4 class="text-center">'+name+'</h4>'+
                                         '<div class="info text-left">'+
-                                            
                                                 '<span>Popularity <span class="pull-right">'+popularity+'</span></span>'+
-                                                //'<span class="pull-right">'+popularity+'</span>'+
-                                           
-                                           
-                                                
-                                           
-                                            
+                                                //'<span class="pull-right">'+popularity+'</span>'+                                
                                         '</div>'+
                                     '</section>'+
                                 '</div>');
-                       
                     }
                     track_album.track_id = id;
                     track_album.track_name = name;
